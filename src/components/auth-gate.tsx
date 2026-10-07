@@ -1,0 +1,3 @@
+import {Authenticated,Unauthenticated,AuthLoading} from "convex/react";
+import {SignIn} from "@/components/sign-in";
+export function AuthGate({children}:{children:React.ReactNode}){return <><AuthLoading><div className="mx-auto max-w-5xl px-4 py-20 text-center opacity-60">Checking your secure session…</div></AuthLoading><Unauthenticated><div className="mx-auto max-w-5xl px-4 py-10"><SignIn/></div></Unauthenticated><Authenticated>{children}</Authenticated></>}
